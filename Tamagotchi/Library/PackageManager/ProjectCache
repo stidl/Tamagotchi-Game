@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637801895430000000
-    m_Hash: 2360643422
+      ticks: 637801942560000000
+    m_Hash: 3937032220
   m_LockFileStatus:
     m_FilePath: /Users/Michael/Documents/GitHub/Mobile-Tamagotchi/Tamagotchi-Game/Tamagotchi/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637801895430000000
-    m_Hash: 2976262353
+      ticks: 637801942560000000
+    m_Hash: 3328257099
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -254,12 +254,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 7d7470f4ca0ea8353d4c9640b3b6ae9d1ebd9c1d
         path: 
-    - packageId: com.unity.2d.psdimporter@4.1.2
+    - packageId: com.unity.2d.psdimporter@4.1.3
       testable: 0
       isDirectDependency: 1
-      version: 4.1.2
+      version: 4.1.3
       source: 1
-      resolvedPath: /Users/Michael/Documents/GitHub/Mobile-Tamagotchi/Tamagotchi-Game/Tamagotchi/Library/PackageCache/com.unity.2d.psdimporter@4.1.2
+      resolvedPath: /Users/Michael/Documents/GitHub/Mobile-Tamagotchi/Tamagotchi-Game/Tamagotchi/Library/PackageCache/com.unity.2d.psdimporter@4.1.3
       assetPath: Packages/com.unity.2d.psdimporter
       name: com.unity.2d.psdimporter
       displayName: 2D PSD Importer
@@ -335,9 +335,9 @@ m_PackageAssets:
         verified: 4.1.3
       dependencies:
       - name: com.unity.2d.common
-        version: 4.0.3
+        version: 4.0.4
       - name: com.unity.2d.animation
-        version: 5.0.9
+        version: 5.0.10
       - name: com.unity.2d.sprite
         version: 1.0.0
       resolvedDependencies:
@@ -377,13 +377,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637704378080000000
+      datePublishedTicks: 637750142410000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 66590de9de7c21359f721ef05db04d7f1753bde9
+        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
         path: 
     - packageId: com.unity.2d.sprite@1.0.0
       testable: 0
