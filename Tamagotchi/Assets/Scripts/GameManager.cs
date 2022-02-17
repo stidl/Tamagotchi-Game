@@ -189,6 +189,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ButtonClick(){
+        counter++;
+            if(counter >= 10){
+            evolved.gameObject.SetActive(true);
+        }
+    }
+
     private void NeedsCheck(){
         if(hunger <= 50){
             foodBubble.CrossFadeAlpha(1, 0.5f, true);
