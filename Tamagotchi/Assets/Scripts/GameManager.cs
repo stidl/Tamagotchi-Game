@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
     public Button sleepBtn;
 
     public GameObject nameText;
-    public int petNumber =  NameTransfer.CharacterInt;
+    public int counter;
+
+    public int petNumber;
     // Start is called before the first frame update
     void Start()
     {
