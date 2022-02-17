@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
    //Pet 2
     public Image pet2Sad;
     public Image pet2Happy;
+    
+     public GameObject evolved;
 
     public Image foodBubble;
     public Image playBubble;
