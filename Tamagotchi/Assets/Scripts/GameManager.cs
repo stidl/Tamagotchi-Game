@@ -221,7 +221,10 @@ public class GameManager : MonoBehaviour
     public void GameOver(){
         if(happiness <=0 || hygiene <=0 || hunger <=0 || sleep <=0){
             SceneManager.LoadScene("GameOverScene");
-        }
-        
+        } 
+    }
+
+    public void QuitGame(){
+        Application.Quit();
     }
 }
