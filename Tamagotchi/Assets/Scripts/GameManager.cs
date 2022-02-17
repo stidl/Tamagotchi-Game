@@ -158,32 +158,32 @@ public class GameManager : MonoBehaviour
     }
 
     void FeedThePet(){
-        //Debug.Log("Feed Button has been clicked");
         hunger += 10;
+        hygiene -=3;
         if (hunger > max){
             hunger = max;
         }
     }
 
     void PlayThePet(){
-        //Debug.Log("Feed Button has been clicked");
         happiness += 10;
+        sleep -=3;
         if (happiness > max){
             happiness = max;
         }
     }
 
     void CleanThePet(){
-        //Debug.Log("Feed Button has been clicked");
         hygiene += 10;
+        happiness -=3;
         if (hygiene > max){
             hygiene = max;
         }
     }
 
     void SleepThePet(){
-        //Debug.Log("Feed Button has been clicked");
         sleep += 10;
+        hunger -=3;
         if (sleep > max){
             sleep = max;
         }
