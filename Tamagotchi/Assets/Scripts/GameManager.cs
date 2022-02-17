@@ -131,6 +131,22 @@ public class GameManager : MonoBehaviour
 
         GameOver();
 
+        Debug.Log("Pet Number: " + petNumber);
+    }
+
+    void CheckifLoadFromSave(){
+        if(LoadSaveScript.loadSave == true){
+        happiness = PlayerPrefs.GetFloat("happinessValue");
+        hygiene = PlayerPrefs.GetFloat("hygieneValue");
+        hunger = PlayerPrefs.GetFloat("hungerValue");
+        sleep = PlayerPrefs.GetFloat("sleepValue");
+        counter = PlayerPrefs.GetInt("foodBtnClicks");
+        nameText.GetComponent<Text>().text = PlayerPrefs.GetString("Name");
+        if(counter >= 10){
+            evolved.gameObject.SetActive(true);
+        }
+        }
+
     }
 
     private void UpdateHungerBar(){
