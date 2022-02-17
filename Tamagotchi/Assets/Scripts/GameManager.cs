@@ -205,6 +205,17 @@ public class GameManager : MonoBehaviour
        //     pet2Happy.gameObject.SetActive(true);
         //    pet2Sad.gameObject.SetActive(false);
        // }
+    public void SaveGame(){
+        PlayerPrefs.SetFloat("hungerValue", hunger);
+        PlayerPrefs.SetFloat("happinessValue", happiness);
+        PlayerPrefs.SetFloat("hygieneValue", hygiene);
+        PlayerPrefs.SetFloat("sleepValue", sleep);
+        PlayerPrefs.SetInt("foodBtnClicks", counter);
+        //PlayerPrefs.SetInt("petType", petNumber);
+        PlayerPrefs.Save();
+        StartCoroutine(SaveGameText());
+        Debug.Log("You just saved " + PlayerPrefs.GetFloat("hungerValue"));
+    }
     }
 
     public void GameOver(){
