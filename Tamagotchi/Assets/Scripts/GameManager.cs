@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
        
         //get the chosen pet from character creator
         if (NameTransfer.CharacterInt == 1){
+       //disable game saved display
+       gameSaved.gameObject.SetActive(false);
+    
             petHappy.gameObject.SetActive(true);
             pet2Happy.gameObject.SetActive(false);
         } else if (NameTransfer.CharacterInt == 2){
