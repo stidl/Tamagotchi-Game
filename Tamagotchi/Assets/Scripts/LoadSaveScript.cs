@@ -27,6 +27,18 @@ public static bool loadSave = false;
         energyText.text = PlayerPrefs.GetFloat("sleepValue").ToString();
         numberOfClicksText.text = PlayerPrefs.GetInt("foodBtnClicks").ToString();
     }
+
+    public void LoadGame(){
+        loadSave = true;
+        SceneManager.LoadScene("MainScene");
+    }
+
+ //       IEnumerator NoSaveGameText(){
+ //       noSave.gameObject.SetActive(true);
+ //       yield return new WaitForSeconds(1f);
+ //       noSave.gameObject.SetActive(false);
+//    }
+
      public void GoBack(){
         SceneManager.LoadScene("StartScene");
     }
@@ -41,3 +53,10 @@ public static bool loadSave = false;
         energyText.text = PlayerPrefs.GetFloat("sleepValue").ToString();
         numberOfClicksText.text = PlayerPrefs.GetInt("foodBtnClicks").ToString();
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
