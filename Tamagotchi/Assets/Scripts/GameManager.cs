@@ -67,6 +67,27 @@ public class GameManager : MonoBehaviour
         sleepBubble.CrossFadeAlpha(0, 0.001f, true);
 
 
+        //If Load from save then set the needs to safed needs
+        CheckifLoadFromSave();
+
+        //Button listener for Hunger
+        Button feed = feedBtn.GetComponent<Button>();
+        feed.onClick.AddListener(FeedThePet); 
+
+        //Button listener for Fun
+        Button play = playBtn.GetComponent<Button>();
+        play.onClick.AddListener(PlayThePet);
+
+        //Button listener for Hygiene
+        Button clean = cleanBtn.GetComponent<Button>();
+        clean.onClick.AddListener(CleanThePet);
+
+        //Button listener for Sleep
+        Button sleep = sleepBtn.GetComponent<Button>();
+        sleep.onClick.AddListener(SleepThePet);
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -192,19 +213,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SatisfiedPetCheck(){
-        if (petNumber == 2 && happiness <=40 || hygiene <=30 || hunger <=50 || sleep <=20){
-            pet2Happy.gameObject.SetActive(false);
-            pet2Sad.gameObject.SetActive(true);
-        } else if (petNumber == 1 && happiness <=40 || hygiene <=30 || hunger <=50 || sleep <=20){
-            petHappy.gameObject.SetActive(false);
-            petSad.gameObject.SetActive(true);
-        }
-        
-       // else{
-       //     pet2Happy.gameObject.SetActive(true);
-        //    pet2Sad.gameObject.SetActive(false);
-       // }
     public void SatisfiedPetCheck(){
     if ((petNumber == 1) && (happiness <=40 || hygiene <=30 || hunger <=50 || sleep <=20)){
         petHappy.gameObject.SetActive(false);
