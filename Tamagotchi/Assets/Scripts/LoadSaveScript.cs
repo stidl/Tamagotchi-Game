@@ -27,3 +27,13 @@ public static bool loadSave = false;
         energyText.text = PlayerPrefs.GetFloat("sleepValue").ToString();
         numberOfClicksText.text = PlayerPrefs.GetInt("foodBtnClicks").ToString();
     }
+     public void DeleteSave(){
+        PlayerPrefs.DeleteAll();
+        nameText.text = PlayerPrefs.GetString("Name");
+        typeOfPetText.text = PlayerPrefs.GetInt("petType").ToString();
+        hungerText.text = PlayerPrefs.GetFloat("hungerValue").ToString();
+        hygieneText.text = PlayerPrefs.GetFloat("hygieneValue").ToString();
+        funText.text = PlayerPrefs.GetFloat("happinessValue").ToString();
+        energyText.text = PlayerPrefs.GetFloat("sleepValue").ToString();
+        numberOfClicksText.text = PlayerPrefs.GetInt("foodBtnClicks").ToString();
+    }
