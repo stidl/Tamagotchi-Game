@@ -27,6 +27,10 @@ public static bool loadSave = false;
         energyText.text = PlayerPrefs.GetFloat("sleepValue").ToString();
         numberOfClicksText.text = PlayerPrefs.GetInt("foodBtnClicks").ToString();
     }
+     public void GoBack(){
+        SceneManager.LoadScene("StartScene");
+    }
+
      public void DeleteSave(){
         PlayerPrefs.DeleteAll();
         nameText.text = PlayerPrefs.GetString("Name");
