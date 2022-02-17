@@ -10,16 +10,19 @@ public class NameTransfer : MonoBehaviour
     public GameObject pet1;
     public GameObject pet2;
 
-     public static string Name;
-    public GameObject inputField;
-    public GameObject textDisplay;
+    public static string Name;
 
-    public static int CharacterInt = 1;
+    public GameObject inputField;
+    //public GameObject textDisplay;
+
+    public static int characterInt = 1;
 
     public void StoreName(){
         Name = inputField.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = Name;
-
+        //textDisplay.GetComponent<Text>().text = Name;
+        PlayerPrefs.SetString("Name", Name);
+        PlayerPrefs.SetInt("petType", characterInt);
+        Debug.Log("Your name is " + PlayerPrefs.GetString("Name"));
     }
 
     private void Awake()
