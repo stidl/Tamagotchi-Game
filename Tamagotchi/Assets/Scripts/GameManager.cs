@@ -205,6 +205,24 @@ public class GameManager : MonoBehaviour
        //     pet2Happy.gameObject.SetActive(true);
         //    pet2Sad.gameObject.SetActive(false);
        // }
+    public void SatisfiedPetCheck(){
+    if ((petNumber == 1) && (happiness <=40 || hygiene <=30 || hunger <=50 || sleep <=20)){
+        petHappy.gameObject.SetActive(false);
+        petSad.gameObject.SetActive(true);
+    } else if ((petNumber == 1) && (happiness >40 || hygiene >30 || hunger >50 || sleep >20)){
+        petHappy.gameObject.SetActive(true);
+        petSad.gameObject.SetActive(false);
+    }
+    
+    if ((petNumber == 2) && (happiness <=40 || hygiene <=30 || hunger <=50 || sleep <=20)){
+        pet2Happy.gameObject.SetActive(false);
+        pet2Sad.gameObject.SetActive(true);
+      } else if ((petNumber == 2) && (happiness >40 || hygiene >30 || hunger >50 || sleep >20)){
+        pet2Happy.gameObject.SetActive(true);
+        pet2Sad.gameObject.SetActive(false);
+      }
+    }
+
     public void SaveGame(){
         PlayerPrefs.SetFloat("hungerValue", hunger);
         PlayerPrefs.SetFloat("happinessValue", happiness);
