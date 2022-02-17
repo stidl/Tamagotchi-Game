@@ -54,13 +54,20 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+  
+
+        //If Load from save then set the needs to safed needs
+        CheckifLoadFromSave();
+        
+
        //disable game saved display
        gameSaved.gameObject.SetActive(false);
     
         //get right pet from static name transfer varable!! mit Name
         //petNumber = PlayerPrefs.GetInt("petType");
+        if(LoadSaveScript.loadSave == false){
         petNumber = NameTransfer.characterInt;
-
+        }
         //get right pet from static name transfer varable!! mit Name
         //nameText.GetComponent<Text>().text = PlayerPrefs.GetString("Name");
         nameText.GetComponent<Text>().text = NameTransfer.Name;
@@ -79,17 +86,16 @@ public class GameManager : MonoBehaviour
         pet2Sad.gameObject.SetActive(false);
 
         //disable evolved
+        if (counter <10){
         evolved.gameObject.SetActive(false);
+        }
+
 
         //disable the needs-bubbles
         foodBubble.CrossFadeAlpha(0, 0.001f, true);
         playBubble.CrossFadeAlpha(0, 0.001f, true);
         cleanBubble.CrossFadeAlpha(0, 0.001f, true);
         sleepBubble.CrossFadeAlpha(0, 0.001f, true);
-
-
-        //If Load from save then set the needs to safed needs
-        CheckifLoadFromSave();
 
         //Button listener for Hunger
         Button feed = feedBtn.GetComponent<Button>();
@@ -106,7 +112,7 @@ public class GameManager : MonoBehaviour
         //Button listener for Sleep
         Button sleep = sleepBtn.GetComponent<Button>();
         sleep.onClick.AddListener(SleepThePet);
-        
+      
     }
 
     // Update is called once per frame
@@ -157,15 +163,17 @@ public class GameManager : MonoBehaviour
 
     void CheckifLoadFromSave(){
         if(LoadSaveScript.loadSave == true){
+        petNumber = PlayerPrefs.GetInt("petType");
         happiness = PlayerPrefs.GetFloat("happinessValue");
         hygiene = PlayerPrefs.GetFloat("hygieneValue");
         hunger = PlayerPrefs.GetFloat("hungerValue");
         sleep = PlayerPrefs.GetFloat("sleepValue");
         counter = PlayerPrefs.GetInt("foodBtnClicks");
         nameText.GetComponent<Text>().text = PlayerPrefs.GetString("Name");
-        if(counter >= 10){
-            evolved.gameObject.SetActive(true);
         }
+
+         if(LoadSaveScript.loadSave == true && counter >= 10){
+            evolved.gameObject.SetActive(true);
         }
 
     }
@@ -280,7 +288,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("hygieneValue", hygiene);
         PlayerPrefs.SetFloat("sleepValue", sleep);
         PlayerPrefs.SetInt("foodBtnClicks", counter);
-        //PlayerPrefs.SetInt("petType", petNumber);
+        PlayerPrefs.SetInt("petType", petNumber);
         PlayerPrefs.Save();
         StartCoroutine(SaveGameText());
         Debug.Log("You just saved " + PlayerPrefs.GetFloat("hungerValue"));
