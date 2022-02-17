@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public Text HygieneText;
     public Text SleepText;
 
+    //pop up für spiel gespeichert
+    public GameObject gameSaved;
+
     //Pet 1
     public Image petSad;
     public Image petHappy;
@@ -51,9 +54,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        //get the chosen pet from character creator
-        if (NameTransfer.CharacterInt == 1){
        //disable game saved display
        gameSaved.gameObject.SetActive(false);
     
