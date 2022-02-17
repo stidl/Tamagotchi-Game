@@ -29,14 +29,14 @@ public class NameTransfer : MonoBehaviour
 
     public void NextCharacter()
     {
-        switch(CharacterInt){
+        switch(characterInt){
         case 1:
             pet1.gameObject.SetActive(false);
             pet2.gameObject.SetActive(true);
-            CharacterInt++;
+            characterInt++;
             break;
         case 2:
-            CharacterInt++;
+            characterInt++;
             pet1.gameObject.SetActive(true);
             pet2.gameObject.SetActive(false);
             ResetInt();
@@ -52,16 +52,16 @@ public class NameTransfer : MonoBehaviour
     }
 
     private void ResetInt(){
-        if (CharacterInt >=2){
-            CharacterInt = 1;
+        if (characterInt >=2){
+            characterInt = 1;
         } else {
-            CharacterInt = 3;
+            characterInt = 3;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("CharacterInt:" + CharacterInt);
+        //Debug.Log("CharacterInt:" + CharacterInt);
     }
 }
