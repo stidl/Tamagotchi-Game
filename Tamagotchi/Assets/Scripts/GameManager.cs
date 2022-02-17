@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
         //petNumber = PlayerPrefs.GetInt("petType");
         petNumber = NameTransfer.characterInt;
 
+        //get right pet from static name transfer varable!! mit Name
+        //nameText.GetComponent<Text>().text = PlayerPrefs.GetString("Name");
+        nameText.GetComponent<Text>().text = NameTransfer.Name;
+
             petHappy.gameObject.SetActive(true);
             pet2Happy.gameObject.SetActive(false);
         } else if (NameTransfer.CharacterInt == 2){
