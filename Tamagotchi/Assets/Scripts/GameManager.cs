@@ -216,6 +216,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SaveGameText());
         Debug.Log("You just saved " + PlayerPrefs.GetFloat("hungerValue"));
     }
+
+    IEnumerator SaveGameText(){
+        gameSaved.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        gameSaved.gameObject.SetActive(false);
     }
 
     public void GameOver(){
