@@ -57,9 +57,11 @@ public class GameManager : MonoBehaviour
         //nameText.GetComponent<Text>().text = PlayerPrefs.GetString("Name");
         nameText.GetComponent<Text>().text = NameTransfer.Name;
 
+         //get the chosen pet from character creator
+        if (petNumber == 1){
             petHappy.gameObject.SetActive(true);
             pet2Happy.gameObject.SetActive(false);
-        } else if (NameTransfer.CharacterInt == 2){
+        } else if (petNumber == 2){
             petHappy.gameObject.SetActive(false);
             pet2Happy.gameObject.SetActive(true);
         }
