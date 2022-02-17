@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     public Image cleanBubble;
     public Image sleepBubble;
 
+    public Button feedBtn;
+    public Button playBtn;
+    public Button cleanBtn;
+    public Button sleepBtn;
 
     public GameObject nameText;
     public int petNumber =  NameTransfer.CharacterInt;
