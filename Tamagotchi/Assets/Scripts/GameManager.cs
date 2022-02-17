@@ -49,6 +49,10 @@ public class GameManager : MonoBehaviour
        //disable game saved display
        gameSaved.gameObject.SetActive(false);
     
+        //get right pet from static name transfer varable!! mit Name
+        //petNumber = PlayerPrefs.GetInt("petType");
+        petNumber = NameTransfer.characterInt;
+
             petHappy.gameObject.SetActive(true);
             pet2Happy.gameObject.SetActive(false);
         } else if (NameTransfer.CharacterInt == 2){
