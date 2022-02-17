@@ -92,28 +92,28 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Deplenish Hunger over Time
-        hunger -= 6f * Time.deltaTime;
+        hunger -= 4f * Time.deltaTime;
         if (hunger <0) 
         {
             hunger = 0;
         }
 
         //Deplenish Happiness over Time
-        happiness -= 5.75f * Time.deltaTime;
+        happiness -= 3.75f * Time.deltaTime;
         if (happiness <0) 
         {
             happiness = 0;
         }
 
         //Deplenish Hygiene over Time
-        hygiene -= 5.25f * Time.deltaTime;
+        hygiene -= 3.25f * Time.deltaTime;
         if (hygiene <0) 
         {
             hygiene = 0;
         }
 
         //Deplenish Sleep over Time
-        sleep -= 5f * Time.deltaTime;
+        sleep -= 3f * Time.deltaTime;
         if (sleep <0) 
         {
             sleep = 0;
@@ -131,7 +131,6 @@ public class GameManager : MonoBehaviour
 
         GameOver();
 
-        Debug.Log("Main CaracterInt" + petNumber);
     }
 
     private void UpdateHungerBar(){
