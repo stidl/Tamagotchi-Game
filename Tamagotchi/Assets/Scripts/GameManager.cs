@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour
         petSad.gameObject.SetActive(false);
         pet2Sad.gameObject.SetActive(false);
 
-        //display pet name
-        nameText.GetComponent<Text>().text = NameTransfer.Name;
+        //disable evolved
+        evolved.gameObject.SetActive(false);
 
         //disable the needs-bubbles
         foodBubble.CrossFadeAlpha(0, 0.001f, true);
