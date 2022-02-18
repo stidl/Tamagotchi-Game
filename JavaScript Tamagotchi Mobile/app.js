@@ -22,11 +22,40 @@ document.getElementById("BtnEnergy").onclick = fillEnergy;
 
   }
   }
+//Fill the needs with button clicks
+function fillHunger(){
+  if(hunger <= 100 && hunger != 0){
+    hunger += 5;
+    hygiene -= 1;
+  } else if (hunger == 0){
+    hunger += 0;
   }
+}
 
+function fillFun(){
+  if(fun <= 100 && fun != 0){
+    fun += 5;
+    energy -= 1;
+  } else if (fun == 0){
+    fun += 0;
   }
+}
 
+function fillHygiene(){
+  if(hygiene <= 100 && hygiene != 0){
+    hygiene += 5;
+    fun -= 1;
+  } else if (hygiene == 0){
+    hygiene += 0;
   }
+}
+
+function fillEnergy(){
+  if(energy <= 100 && energy != 0){
+    energy += 5;
+    hunger -=1;
+  } else if (energy == 0){
+    energy += 0;
   }
 
 
