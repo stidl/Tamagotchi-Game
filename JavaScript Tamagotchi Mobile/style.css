@@ -1,10 +1,9 @@
-#gameScreen { 
-    border: 1px solid black;
- }    width: 80px;
 
 .output{
     background-color: rgb(170, 123, 231);
 }
+#BtnHunger{
+    width: 80px;
     outline: none;
     padding: 20px;
     background-color: #F5F47C;
