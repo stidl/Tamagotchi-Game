@@ -16,12 +16,51 @@ document.getElementById("BtnEnergy").onclick = fillEnergy;
 
 				
   }
+//make needs go down
+function depleteHunger(){
+  if(hunger == 0){
+    clearInterval(clock1);
+    //alert("Your pet is starving!");
+    //gameovercheck();
+  } else{
+    hunger--;
+    document.getElementById("HungerBar").value = hunger;
   }
+}
 
+function depleteFun(){
+  if(fun == 0){
+    clearInterval(clock1);
+    //alert("Your pet is bored to death!");
+    //gameovercheck();
+  } else{
+    fun--;
+    document.getElementById("FunBar").value = fun;
   }
+}
 
+function depleteHygiene(){
+  if(hygiene == 0){
+    clearInterval(clock1);
+    //alert("Your pet is filthy!");
+    //gameovercheck();
+  } else{
+    hygiene--;
+    document.getElementById("HygieneBar").value = hygiene;
   }
+}
+
+function depleteEnergy(){
+  if(energy == 0){
+    clearInterval(clock1);
+    //alert("Your pet is passing out!");
+    //gameovercheck();
+  } else{
+    energy--;
+    document.getElementById("EnergyBar").value = energy;
   }
+}
+
 //Fill the needs with button clicks
 function fillHunger(){
   if(hunger <= 100 && hunger != 0){
