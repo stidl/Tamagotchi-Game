@@ -35,3 +35,19 @@
 }
 
 .bubbles {
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        padding-top: 50px;
+        margin-bottom: -40px;
+    }
+ 
+.bath-bubble{ 
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.play-bubble{
+    margin-left: 5px;
+}
+
