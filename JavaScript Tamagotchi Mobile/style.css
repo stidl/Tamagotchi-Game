@@ -1,3 +1,37 @@
 #gameScreen { 
     border: 1px solid black;
- }
+ }    width: 80px;
+    outline: none;
+    padding: 20px;
+    background-color: #F5F47C;
+    border-radius: 10%;
+}
+
+#BtnFun{
+    width: 80px;
+    outline: none;
+    padding: 20px;
+    background-color: #FF86F8;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10%;
+}
+
+#BtnHygiene{
+    width: 80px;
+    outline: none;
+    padding: 20px;
+    background-color: #83F4FF;
+    margin-right: 5px;
+    border-radius: 10%;
+}
+
+#BtnEnergy{
+    width: 80px;
+    outline: none;
+    padding: 20px;
+    background-color: #81FF89;
+    border-radius: 10%;
+}
+
+.bubbles {
