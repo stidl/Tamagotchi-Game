@@ -15,6 +15,11 @@ document.getElementById("BtnHygiene").onclick = fillHygiene;
 document.getElementById("BtnEnergy").onclick = fillEnergy;
 
 				
+//setInterval gets called every second///////////
+setInterval(function(){ 
+  spriteHandler();
+  bubbleHandler();
+}, 1000);
   }
 //make needs go down
 function depleteHunger(){
