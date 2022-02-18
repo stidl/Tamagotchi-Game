@@ -74,6 +74,30 @@ position: relative;
     position: absolute; 
 }
 
+.neebBars{
+    padding-top:20px; 
+}
+
+.hunger{ 
+    display: flex;
+    justify-content: center;
+}
+
+.fun{ 
+    display: flex;
+    justify-content: center;
+}
+
+.hygiene{ 
+    display: flex;
+    justify-content: center;
+}
+
+.energy{ 
+    display: flex;
+    justify-content: center;
+}
+
 .food-image{
     opacity: 0;
 }
