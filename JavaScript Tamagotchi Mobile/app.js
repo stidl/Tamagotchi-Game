@@ -1,3 +1,4 @@
+window.onload = function() {
 
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
@@ -47,6 +48,17 @@ if(energy <= 35){
   } else {
     document.getElementById("sleep-image1").style.opacity ="0";
   }
+}
+
+//handles the need bubbles
+function spriteHandler(){
+  if(hunger <= 50 || fun <= 45 || hygiene <= 40 || energy <= 35){
+    document.getElementById("pet1Happy").src = "Pet1Sad.gif";
+} else {
+  document.getElementById("pet1Happy").src = "pet1happy.gif";
+}
+}
+
 //make needs go down
 function depleteHunger(){
   if(hunger == 0){
@@ -127,5 +139,7 @@ function fillEnergy(){
   } else if (energy == 0){
     energy += 0;
   }
+}
 
 
+}
