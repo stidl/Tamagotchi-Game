@@ -74,6 +74,12 @@ position: relative;
     position: absolute; 
 }
 
+.allButtons{
+    display: flex; 
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
 .neebBars{
     padding-top:20px; 
 }
