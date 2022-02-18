@@ -51,3 +51,26 @@
     margin-left: 5px;
 }
 
+.pet{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.pet1Happy{
+position: relative;
+
+}
+
+.pet1Sad{
+   position: absolute; 
+}
+
+.pet2Happy{
+    position: absolute; 
+}
+
+.pet2Sad{
+    position: absolute; 
+}
+
