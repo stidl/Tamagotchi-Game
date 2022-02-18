@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="style.css"></link>
+    
+<script>
+
+window.onload = function() {
+
+var hunger = 100;
+var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
+var fun = 100;
+var clock2 = setInterval(depleteFun, 350);
+var hygiene = 100;
+var clock3 = setInterval(depleteHygiene, 350);
+var energy = 100;
+var clock4 = setInterval(depleteEnergy, 350);
+
+//make buttons work
+document.getElementById("BtnHunger").onclick = fillHunger;
+document.getElementById("BtnFun").onclick = fillFun;
+document.getElementById("BtnHygiene").onclick = fillHygiene;
+document.getElementById("BtnEnergy").onclick = fillEnergy;
+
+//make needs go down
+function depleteHunger(){
+  if(hunger == 0){
+    clearInterval(clock1);
+    //alert("Your pet is starving!");
+    //gameovercheck();
+  } else{
+    hunger--;
+    document.getElementById("HungerBar").value = hunger;
+  }
+}
+
+function depleteFun(){
+  if(fun == 0){
+    clearInterval(clock1);
+    //alert("Your pet is bored to death!");
+    //gameovercheck();
+  } else{
+    fun--;
+    document.getElementById("FunBar").value = fun;
+  }
+}
+
+function depleteHygiene(){
+  if(hygiene == 0){
+    clearInterval(clock1);
+    //alert("Your pet is filthy!");
+    //gameovercheck();
+  } else{
+    hygiene--;
+    document.getElementById("HygieneBar").value = hygiene;
+  }
+}
+
+function depleteEnergy(){
+  if(energy == 0){
+    clearInterval(clock1);
+    //alert("Your pet is passing out!");
+    //gameovercheck();
+  } else{
+    energy--;
+    document.getElementById("EnergyBar").value = energy;
+  }
+}
+
+//Fill the needs with button clicks
+function fillHunger(){
+  if(hunger <= 100 && hunger != 0){
+    hunger += 5;
+  } else if (hunger == 0){
+    hunger += 0;
+  }
+}
+
+function fillFun(){
+  if(fun <= 100 && fun != 0){
+    fun += 5;
+  } else if (fun == 0){
+    fun += 0;
+  }
+}
+
+function fillHygiene(){
+  if(hygiene <= 100 && hygiene != 0){
+    hygiene += 5;
+  } else if (hygiene == 0){
+    hygiene += 0;
+  }
+}
+
+function fillEnergy(){
+  if(energy <= 100 && energy != 0){
+    energy += 5;
+  } else if (energy == 0){
+    energy += 0;
+  }
+}
+
+//SpriteHandler 
+
+}
+
+</script>
+
+  </head>
+  <body>
+
+
+
+<div class="output">
+
+<div class="hunger">
+  <label>
+    <span class="name">Hunger</span>
+    <progress id="HungerBar" value="100" min="0" max="100"></progress>
+    <span class="value"></span>
+  </label>
+</div>
+
+<div class="fun">
+  <label>
+    <span class="name">Fun</span>
+    <progress id="FunBar" value="100" min="0" max="100"></progress>
+    <span class="value"></span>
+  </label>
+</div>
+
+<div class="hygiene">
+  <label>
+    <span class="name">Hygiene</span>
+    <progress id="HygieneBar" value="100" min="0" max="100"></progress>
+    <span class="value"></span>
+  </label>
+</div>
+
+<div class="energy">
+  <label>
+    <span class="name">Energy</span>
+    <progress id="EnergyBar" value="100" min="min" max="100"></progress>
+    <span class="value"></span>
+  </label>
+</div>
+
+<div class="pet">
+<img class="pet1" src="petHappy.png" alt="Pet" width="240" height="240"/>
+</div>
+
+<div id="Buttons">
+  <input id="BtnHunger" type="Button" value="Feed">
+  <input id="BtnFun" type="Button" value="Play">
+  <input id="BtnHygiene" type="Button" value="Clean">
+  <input id="BtnEnergy" type="Button" value="Sleep">
+ </div>
+
+</div>
+
+<canvas id="gameScreen" width="375" height="812"></canvas>
+
+  </body>
+</html>
