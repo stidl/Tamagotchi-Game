@@ -20,6 +20,32 @@ setInterval(function(){
   spriteHandler();
   bubbleHandler();
 }, 1000);
+
+
+//handels the sprites and bubbles
+function bubbleHandler(){
+if(hunger <= 50){
+  document.getElementById("food-image1").style.opacity ="1";
+} else {
+  document.getElementById("food-image1").style.opacity ="0";
+}
+
+if(fun <= 45){
+  document.getElementById("play-image1").style.opacity ="1";
+} else {
+  document.getElementById("play-image1").style.opacity ="0";
+}
+
+if(hygiene <= 40){
+  document.getElementById("bath-image1").style.opacity ="1";
+} else {
+  document.getElementById("bath-image1").style.opacity ="0";
+}
+
+if(energy <= 35){
+    document.getElementById("sleep-image1").style.opacity ="1";
+  } else {
+    document.getElementById("sleep-image1").style.opacity ="0";
   }
 //make needs go down
 function depleteHunger(){
