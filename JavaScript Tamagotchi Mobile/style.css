@@ -74,3 +74,18 @@ position: relative;
     position: absolute; 
 }
 
+.food-image{
+    opacity: 0;
+}
+
+.play-image{
+    opacity: 0;
+}
+
+.bath-image{
+    opacity: 0;
+}
+
+.sleep-image{
+    opacity: 0;
+}
