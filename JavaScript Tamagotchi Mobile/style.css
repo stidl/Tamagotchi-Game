@@ -178,4 +178,22 @@ position: relative;
     font-weight: bold;
 }
 
+.evolve{
+    position: absolute; 
+    top: 50%; 
+    left: 5%;
+}
+
+.evolveImage{
+    width: 70%;
+}
+
+.evolveImage2{
+    position: absolute; 
+    bottom: 220%; 
+    left: 440%; 
+    width: 80%;
+    transform: scale(-1);
+}
+
 }
