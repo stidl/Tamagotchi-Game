@@ -224,13 +224,19 @@ function depleteEnergy(){
   }
 }
 
+
 //Fill the needs with button clicks
 function fillHunger(){
+  console.log("You have clicked the btn: " + btnClicked);
   if(hunger <= 100 && hunger != 0){
     hunger += 5;
     hygiene -= 1;
+    btnClicked++;
   } else if (hunger == 0){
     hunger += 0;
+  }
+  if(btnClicked >= 11){
+    document.getElementById("evolve").style.visibility = "visible";
   }
 }
 
