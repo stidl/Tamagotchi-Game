@@ -31,6 +31,13 @@ document.getElementById("arrowRight").onclick = changePetNext;
 document.getElementById("confirmBtn").onclick = confirmPetChoice;
 }
 
+function confirmPetChoice(){
+if (gameState == 1)
+gameState = 2;
+document.getElementById("startScreen").style.display = "none";
+document.getElementById("mainScreen").style.visibility = "visible";
+getInputValue();
+}
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
 var fun = 100;
