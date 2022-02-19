@@ -79,8 +79,25 @@ document.getElementById("BtnFun").onclick = fillFun;
 document.getElementById("BtnHygiene").onclick = fillHygiene;
 document.getElementById("BtnEnergy").onclick = fillEnergy;
 
-				
-//setInterval gets called every second///////////
+
+//load Game!
+document.getElementById("BtnLoad").onclick = loadGame;
+function loadGame(){
+  //console.log("save button is clicked");
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("mainScreen").style.visibility = "visible";
+  gameState = 2;
+  hunger = window.localStorage.getItem("Hunger", hunger);
+  fun = window.localStorage.getItem("Fun", fun);
+  hygiene = window.localStorage.getItem("Hygiene", hygiene);
+  energy = window.localStorage.getItem("Energy", energy);
+  btnClicked = window.localStorage.getItem("Evolve", btnClicked);
+  petNumber = window.localStorage.getItem("PetType", petNumber);
+  document.getElementById("petNameOutput").innerHTML = "Pet Name: " + window.localStorage.getItem("PetName", inputVal);
+  if(btnClicked >= 11){
+    document.getElementById("evolve").style.visibility = "visible";
+  }
+}
 setInterval(function(){ 
   spriteHandler();
   bubbleHandler();
