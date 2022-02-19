@@ -179,45 +179,46 @@ function gameOver(){
 }
 
 //make needs go down
+
 function depleteHunger(){
-  if(hunger == 0){
+  if(gameState==2 && hunger == 0){
     clearInterval(clock1);
     //alert("Your pet is starving!");
     //gameovercheck();
-  } else{
+  } else if (gameState==2){
     hunger--;
     document.getElementById("HungerBar").value = hunger;
   }
 }
 
 function depleteFun(){
-  if(fun == 0){
+  if(gameState==2 && fun == 0){
     clearInterval(clock1);
     //alert("Your pet is bored to death!");
     //gameovercheck();
-  } else{
+  } else if (gameState==2){
     fun--;
     document.getElementById("FunBar").value = fun;
   }
 }
 
 function depleteHygiene(){
-  if(hygiene == 0){
+  if(gameState==2 && hygiene == 0){
     clearInterval(clock1);
     //alert("Your pet is filthy!");
     //gameovercheck();
-  } else{
+  } else if (gameState==2){
     hygiene--;
     document.getElementById("HygieneBar").value = hygiene;
   }
 }
 
 function depleteEnergy(){
-  if(energy == 0){
+  if(gameState==2 && energy == 0){
     clearInterval(clock1);
     //alert("Your pet is passing out!");
     //gameovercheck();
-  } else{
+  } else if (gameState==2){
     energy--;
     document.getElementById("EnergyBar").value = energy;
   }
