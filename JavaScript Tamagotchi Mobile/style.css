@@ -134,4 +134,48 @@ position: relative;
     margin: auto;
 }
 
+.startScreen{
+    position: absolute;
+    bottom: 80%;   
+}
+
+.titleImage{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.arrowLeft{
+    position: absolute;
+    top: 220%; 
+    width: 20%;
+    display: block;
+    margin: auto;
+    z-index: 8;
+}
+
+.arrowRight{
+    position: absolute;
+    top: 220%; 
+    left: 77%;
+    width: 20%;
+    transform: scale(-1);
+    display: block;
+    margin: auto;
+    z-index: 8;
+}
+
+.confirmBtn{
+    position: absolute;
+    top: 450%; 
+    left: 40%;
+    width: 80px;
+    outline: none;
+    padding: 5px;
+    background-color: #fffd83;
+    margin-right: 5px;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
 }
