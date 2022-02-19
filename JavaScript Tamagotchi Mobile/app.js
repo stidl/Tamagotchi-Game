@@ -152,10 +152,10 @@ if(energy <= 35){
 
 //handles the need bubbles
 function spriteHandler(){
-  if(hunger <= 50 || fun <= 45 || hygiene <= 40 || energy <= 35){
+  if((gameState==2) && (petNumber == 1) && (hunger <= 50 || fun <= 45 || hygiene <= 40 || energy <= 35)){
     document.getElementById("pet1Happy").src = "Pet1Sad.gif";
-} else {
-  document.getElementById("pet1Happy").src = "pet1happy.gif";
+} else if (gameState==2 && petNumber == 1){
+  document.getElementById("pet1Happy").src = "Pet1happy.gif";
 }
 }
 
