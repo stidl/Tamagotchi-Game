@@ -70,6 +70,9 @@ var clock3 = setInterval(depleteHygiene, 350);
 var energy = 100;
 var clock4 = setInterval(depleteEnergy, 350);
 
+var btnClicked = 0;
+
+
 //make buttons work
 document.getElementById("BtnHunger").onclick = fillHunger;
 document.getElementById("BtnFun").onclick = fillFun;
