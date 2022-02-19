@@ -38,6 +38,17 @@ document.getElementById("startScreen").style.display = "none";
 document.getElementById("mainScreen").style.visibility = "visible";
 getInputValue();
 }
+
+function changePetPrevious(){
+if (petNumber == 1){
+    //alert("Left Button Pressed!");
+  petNumber = 2;
+  document.getElementById("pet1Happy").src = "PetHappy2.gif";
+} else if(petNumber == 2){
+  document.getElementById("pet1Happy").src = "pet1happy.gif";
+  petNumber =1;
+}
+}
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
 var fun = 100;
