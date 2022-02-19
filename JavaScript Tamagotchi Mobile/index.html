@@ -6,6 +6,7 @@
     <title>Tamagotchi</title>
     <link rel="stylesheet" href="style.css"></link>
     <script type="text/javascript" src="app.js"></script>
+  
   </head>
   <body>
 
@@ -13,7 +14,17 @@
 
 <div class="output">
 
-<div class="neebBars">
+  <div class="startScreen" id="startScreen">
+      <img class="titleImage" id="titleImage" src="Title.png" alt="MyVirtualPet" />
+      <input type="image" class="arrowLeft" id="arrowLeft" src="arrow.png" alt="Arrow left" />
+      <input type="image" class="arrowRight" id="arrowRight" src="arrow.png" alt="Arrow right" />
+      <input class="confirmBtn" id="confirmBtn" type="Button" value="Confirm">
+      <input class="BtnLoad" id="BtnLoad" type="Button" value="Load Game">
+      <div class="PetNameInput" id="PetNameInput">
+      <label for="petName">Pet Name:</label>
+      <input type="text" id="petName" name="petName">
+    </div>
+  </div>
 
 <div class="hunger">
   <label>
