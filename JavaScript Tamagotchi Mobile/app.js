@@ -3,6 +3,9 @@ window.onload = function() {
   //Game State!
 var gameState = 1;
 
+// Pet Number
+var petNumber = 1; 
+
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
 var fun = 100;
