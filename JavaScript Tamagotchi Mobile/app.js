@@ -164,6 +164,18 @@ if ((gameState==2) && (petNumber == 2) && (hunger <= 50 || fun <= 45 || hygiene 
   document.getElementById("pet1Happy").src = "PetHappy2.gif";
 }
 }
+
+function gameOver(){
+  if ((gameState==2) && (hunger <= 0 || fun <= 0 || hygiene <= 0 || energy <= 0)){
+    document.getElementById("pet1Happy").style.visibility = "hidden";
+    document.getElementById("food-image1").style.visibility = "hidden";
+    document.getElementById("play-image1").style.visibility = "hidden";
+    document.getElementById("bath-image1").style.visibility = "hidden";
+    document.getElementById("sleep-image1").style.visibility = "hidden";
+    document.getElementById("gameOver").style.visibility = "visible";
+    document.getElementById("mainScreen").style.visibility = "hidden";
+    document.getElementById("evolve").style.visibility = "hidden";
+  }
 }
 
 //make needs go down
