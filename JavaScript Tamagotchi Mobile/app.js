@@ -157,6 +157,13 @@ function spriteHandler(){
 } else if (gameState==2 && petNumber == 1){
   document.getElementById("pet1Happy").src = "Pet1happy.gif";
 }
+
+if ((gameState==2) && (petNumber == 2) && (hunger <= 50 || fun <= 45 || hygiene <= 40 || energy <= 35)){
+  document.getElementById("pet1Happy").src = "PetSad2.gif";
+} else if (gameState==2 && petNumber == 2){
+  document.getElementById("pet1Happy").src = "PetHappy2.gif";
+}
+}
 }
 
 //make needs go down
