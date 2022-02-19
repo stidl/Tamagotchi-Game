@@ -196,4 +196,17 @@ position: relative;
     transform: scale(-1);
 }
 
+.BtnLoad{
+    position: absolute;
+    top: 500%; 
+    left: 39%;
+    width: 90px;
+    outline: none;
+    padding: 5px;
+    background-color: #81FF89;
+    margin-right: 5px;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
 }
