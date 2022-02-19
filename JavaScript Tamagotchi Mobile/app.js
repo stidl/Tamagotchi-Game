@@ -98,6 +98,21 @@ function loadGame(){
     document.getElementById("evolve").style.visibility = "visible";
   }
 }
+
+//save Game!!
+document.getElementById("BtnSafe").onclick = saveGame;
+
+function saveGame(){
+  //console.log("button is clicked" + hunger);
+  window.localStorage.setItem("Hunger", hunger);
+  window.localStorage.setItem("Fun", fun);
+  window.localStorage.setItem("Hygiene", hygiene);
+  window.localStorage.setItem("Energy", energy);
+  window.localStorage.setItem("Evolve", btnClicked);
+  window.localStorage.setItem("PetType", petNumber);
+  window.localStorage.setItem("PetName", document.getElementById("petName").value);
+  //alert();
+}
 setInterval(function(){ 
   spriteHandler();
   bubbleHandler();
