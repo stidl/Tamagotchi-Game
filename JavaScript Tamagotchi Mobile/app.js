@@ -9,6 +9,13 @@ var petNumber = 1;
 //Pet Name stored
 var inputVal;
 
+//get input value aka pet name from text field
+function getInputValue(){
+  var inputVal = document.getElementById("petName").value;
+  document.getElementById("petNameOutput").innerHTML = "Pet Name: " + inputVal;
+  //alert(inputVal);
+}
+
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
 var fun = 100;
