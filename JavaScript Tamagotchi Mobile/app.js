@@ -113,9 +113,13 @@ function saveGame(){
   window.localStorage.setItem("PetName", document.getElementById("petName").value);
   //alert();
 }
+
+//setInterval gets called every second for Main Screen///////////
 setInterval(function(){ 
   spriteHandler();
   bubbleHandler();
+  gameOver();
+  //console.log("Your game state is: " + gameState)
 }, 1000);
 
 
