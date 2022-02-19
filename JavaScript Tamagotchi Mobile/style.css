@@ -122,3 +122,16 @@ position: relative;
 .sleep-image{
     opacity: 0;
 }
+
+.gameOver{
+    position: absolute;
+   bottom: 60%;
+}
+
+.gameOverImage{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+}
