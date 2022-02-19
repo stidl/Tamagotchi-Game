@@ -16,6 +16,21 @@ function getInputValue(){
   //alert(inputVal);
 }
 
+//hide and show elements for start Screen
+if (gameState == 1){
+//document.getElementById("gameOver").style.visibility = "hidden";
+//document.getElementById("needBars").style.visibility = "hidden";
+//document.getElementById("Buttons").style.visibility = "hidden";
+document.getElementById("mainScreen").style.visibility = "hidden";
+document.getElementById("gameOver").style.visibility = "hidden";
+document.getElementById("evolve").style.visibility = "hidden";
+document.getElementById("pet").style.visibility = "visible";
+//document.getElementById("pet1Happy").src = "pet1happy.gif";
+document.getElementById("arrowLeft").onclick = changePetPrevious;
+document.getElementById("arrowRight").onclick = changePetNext;
+document.getElementById("confirmBtn").onclick = confirmPetChoice;
+}
+
 var hunger = 100;
 var clock1 = setInterval(depleteHunger, 350); //Hunger decrement Speed
 var fun = 100;
