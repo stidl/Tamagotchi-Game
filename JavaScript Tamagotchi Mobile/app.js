@@ -18,14 +18,10 @@ function getInputValue(){
 
 //hide and show elements for start Screen
 if (gameState == 1){
-//document.getElementById("gameOver").style.visibility = "hidden";
-//document.getElementById("needBars").style.visibility = "hidden";
-//document.getElementById("Buttons").style.visibility = "hidden";
 document.getElementById("mainScreen").style.visibility = "hidden";
 document.getElementById("gameOver").style.visibility = "hidden";
 document.getElementById("evolve").style.visibility = "hidden";
 document.getElementById("pet").style.visibility = "visible";
-//document.getElementById("pet1Happy").src = "pet1happy.gif";
 document.getElementById("arrowLeft").onclick = changePetPrevious;
 document.getElementById("arrowRight").onclick = changePetNext;
 document.getElementById("confirmBtn").onclick = confirmPetChoice;
@@ -41,7 +37,6 @@ getInputValue();
 
 function changePetPrevious(){
 if (petNumber == 1){
-    //alert("Left Button Pressed!");
   petNumber = 2;
   document.getElementById("pet1Happy").src = "PetHappy2.gif";
 } else if(petNumber == 2){
@@ -52,7 +47,6 @@ if (petNumber == 1){
 
 function changePetNext(){
   if (petNumber == 1){
-    //alert("Right Button Pressed!");
   petNumber = 2;
   document.getElementById("pet1Happy").src = "PetHappy2.gif";
 } else if(petNumber == 2){
@@ -69,9 +63,7 @@ var hygiene = 100;
 var clock3 = setInterval(depleteHygiene, 350);
 var energy = 100;
 var clock4 = setInterval(depleteEnergy, 350);
-
 var btnClicked = 0;
-
 
 //make buttons work
 document.getElementById("BtnHunger").onclick = fillHunger;
@@ -103,7 +95,6 @@ function loadGame(){
 document.getElementById("BtnSafe").onclick = saveGame;
 
 function saveGame(){
-  //console.log("button is clicked" + hunger);
   window.localStorage.setItem("Hunger", hunger);
   window.localStorage.setItem("Fun", fun);
   window.localStorage.setItem("Hygiene", hygiene);
@@ -111,7 +102,6 @@ function saveGame(){
   window.localStorage.setItem("Evolve", btnClicked);
   window.localStorage.setItem("PetType", petNumber);
   window.localStorage.setItem("PetName", document.getElementById("petName").value);
-  //alert();
 }
 
 //setInterval gets called every second for Main Screen///////////
@@ -178,13 +168,10 @@ function gameOver(){
   }
 }
 
-//make needs go down
-
+//makes needs go down
 function depleteHunger(){
   if(gameState==2 && hunger == 0){
     clearInterval(clock1);
-    //alert("Your pet is starving!");
-    //gameovercheck();
   } else if (gameState==2){
     hunger--;
     document.getElementById("HungerBar").value = hunger;
@@ -194,8 +181,6 @@ function depleteHunger(){
 function depleteFun(){
   if(gameState==2 && fun == 0){
     clearInterval(clock1);
-    //alert("Your pet is bored to death!");
-    //gameovercheck();
   } else if (gameState==2){
     fun--;
     document.getElementById("FunBar").value = fun;
@@ -205,8 +190,6 @@ function depleteFun(){
 function depleteHygiene(){
   if(gameState==2 && hygiene == 0){
     clearInterval(clock1);
-    //alert("Your pet is filthy!");
-    //gameovercheck();
   } else if (gameState==2){
     hygiene--;
     document.getElementById("HygieneBar").value = hygiene;
@@ -216,14 +199,11 @@ function depleteHygiene(){
 function depleteEnergy(){
   if(gameState==2 && energy == 0){
     clearInterval(clock1);
-    //alert("Your pet is passing out!");
-    //gameovercheck();
   } else if (gameState==2){
     energy--;
     document.getElementById("EnergyBar").value = energy;
   }
 }
-
 
 //Fill the needs with button clicks
 function fillHunger(){
