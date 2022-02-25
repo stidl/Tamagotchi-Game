@@ -836,4 +836,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LoadSaveScene.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/GameOverScene.unity
-  playerPath: /Users/Michael/Desktop/MyVirtualPet_Build.app
+  playerPath: /Users/Michael/Desktop/MyVirtualPet_Build2.app
